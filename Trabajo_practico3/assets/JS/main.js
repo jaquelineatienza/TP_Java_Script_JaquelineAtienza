@@ -1,4 +1,4 @@
-let tareas = [];
+let tareas = ["lunes,martes,miercoles"];
 
 // if (tipoTarea === "resta"){
 //     tipoTarea = prompt("ingrese el tipo de tarea");
@@ -29,22 +29,21 @@ for (let i = 0; i <9; i++) {
             tarea();
             break;
         case 3:
-            tarea(prompt("ingrese la palabra que se desea editar"))
-            nuevaTarea=tareas.indexOf(tarea);
-            if (nuevaTarea !== -1) {
-                tareas[nuevaTarea] = prompt("ingrese la nueva palabra");
-            } else {
-                console.log("Tarea no encontrada");
+            let editar = prompt()
+            function editarTarea(){
+                nuevaTarea=tareas.indexOf(editar);
+                if (nuevaTarea !== -1) {
+                    tareas[nuevaTarea] = prompt("ingrese la nueva palabra");
+                } else {
+                    console.log("Tarea no encontrada");
+                }
             }
-            editarTarea();
+           
             break;
         case 4:
             alert("hooy");
             break;
-        default:
-            alert("numero ingresado no valido");
-            break;
-    }
+        }
     if (tipoTarea===0){
         break;
     }
@@ -53,8 +52,8 @@ for (let i = 0; i <9; i++) {
 function tarea(tarea){
     tareas.push(tarea);
 }
-function editarTarea(){
-  
-}
+
+
+
 
 
