@@ -1,21 +1,4 @@
-let tareas = ["lunes,martes,miercoles"];
-
-// if (tipoTarea === "resta"){
-//     tipoTarea = prompt("ingrese el tipo de tarea");
-//     restaTarea()
-//     alert(tareas);
-// }else if(tipoTarea==="sumar"){
-// tarea(prompt("ingrese algo"));
-// alert(tareas);
-// }else if(tipoTarea==="editar"){
-
-// }
-// editTare="restas";
-// function restaTarea(){
-//     tareas=tareas.filter(tarea1=>tarea1!==tipoTarea);
-// }
-
-
+let tareas = ["lunes","martes","miercoles"];
 for (let i = 0; i <9; i++) {
     let tipoTarea = parseInt(prompt("¿Qué tarea desea realizar?\n"+"1:Ver lista\n"+"2:Agregar un elemento\n"+"3:Editar un elemento\n"+"4:Borrar un elemento elemento\n"+"0:Cerrar programa"));
     switch (tipoTarea) {
@@ -24,36 +7,46 @@ for (let i = 0; i <9; i++) {
         case 1:
             alert(tareas);
             break;
+
         case 2:
-            tarea(prompt("ingrese la materia"))
-            tarea();
+            let tareaAgregada=(prompt("ingrese la materia"));
+            if(tareaAgregada === " "){
+                alert("error no se permiten espacios en blanco");
+            }else{
+                alert("nombre valido")
+                AgregarTarea(tareaAgregada); 
+            }
+         
+            console.log(tareas);
             break;
         case 3:
-            let editar = prompt()
-            function editarTarea(){
+            let editar = prompt("ingrese la materia que quiere editar")
+            
                 nuevaTarea=tareas.indexOf(editar);
-                if (nuevaTarea !== -1) {
-                    tareas[nuevaTarea] = prompt("ingrese la nueva palabra");
+                if (nuevaTarea !==-1) {
+                    tareas[nuevaTarea] = prompt("ingrese la nueva materia");
                 } else {
-                    console.log("Tarea no encontrada");
+                    alert("materia no encontrada");
                 }
-            }
-           
             break;
         case 4:
-            alert("hooy");
-            break;
+            eliminarTarea(prompt("ingrese la tarea a eliminar"));
+            eliminarTarea();
+            console.log(tareas);
+        default:
+            alert("numero ingresado no valido");
+                break
         }
-    if (tipoTarea===0){
+   if (tipoTarea===0){
         break;
     }
+   
+    
 }
- 
-function tarea(tarea){
-    tareas.push(tarea);
+function AgregarTarea(tareaAgregada){
+    tareas.push(tareaAgregada);
 }
-
-
-
-
+function eliminarTarea(eliminarTarea) {
+    tareas = tareas.filter(tarea1 => tarea1 !==eliminarTarea);
+}
 
