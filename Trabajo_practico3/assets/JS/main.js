@@ -77,9 +77,9 @@ function eliminarTarea(tarea) {
     let indice = tareas.indexOf(tarea);
     if (indice !== -1) {
         tareas.splice(indice, 1);
-        console.log(`Tarea "${tarea}" eliminada.`);
+        alert(`Tarea "${tarea}" eliminada.`);
     } else {
-        console.log(`Tarea "${tarea}" no encontrada.`);
+        alert(`Tarea "${tarea}" no encontrada.`);
     }
 }
 
