@@ -1,4 +1,4 @@
-let tareas = ["lunes","martes"]
+let tareas = [];
  let tipoTarea= 0;
 while (tipoTarea !== 5){
      tipoTarea = parseInt(prompt("¿Qué tarea desea realizar?\n"+"1:Ver lista\n"+"2:Agregar un elemento\n"+"3:Editar un elemento\n"+"4:Borrar un elemento elemento\n"+"5:Cerrar programa"));
