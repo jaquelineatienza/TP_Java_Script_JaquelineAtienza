@@ -1,13 +1,12 @@
 let tareas = [];
- let tipoTarea= 0;
+let tipoTarea= 0;
 while (tipoTarea !== 5){
-     tipoTarea = parseInt(prompt("¿Qué tarea desea realizar?\n"+"1:Ver lista\n"+"2:Agregar un elemento\n"+"3:Editar un elemento\n"+"4:Borrar un elemento elemento\n"+"5:Cerrar programa"));
+    tipoTarea = parseInt(prompt("¿Qué tarea desea realizar?\n"+"1:Ver lista\n"+"2:Agregar un elemento\n"+"3:Editar un elemento\n"+"4:Borrar un elemento elemento\n"+"5:Cerrar programa"));
 
     switch (tipoTarea) {
         case 1:
             verTareas();
             break;
-           
         case 2:
             let tareaAgregada=(prompt("ingrese la materia"));
             if (tareaAgregada.trim() === "") {
@@ -58,7 +57,7 @@ while (tipoTarea !== 5){
             alert("numero ingresado no valido");
                 break
         }
-   if (tipoTarea===0){
+    if (tipoTarea===0){
         break;
     }
 }  
@@ -77,9 +76,9 @@ function eliminarTarea(tarea) {
     let indice = tareas.indexOf(tarea);
     if (indice !== -1) {
         tareas.splice(indice, 1);
-        alert(`Tarea "${tarea}" eliminada.`);
+        alert(`Tarea ${tarea} eliminada.`);
     } else {
-        alert(`Tarea "${tarea}" no encontrada.`);
+        alert(`Tarea ${tarea} no encontrada.`);
     }
 }
 
